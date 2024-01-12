@@ -1,0 +1,9 @@
+[user]
+	name = Carlos Santos
+	email = casantosmu@gmail.com
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
+[alias]
+	uncommit = reset HEAD^

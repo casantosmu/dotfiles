@@ -1,0 +1,4 @@
+tsx
+pino-pretty
+dotenv-cli
+npkill
