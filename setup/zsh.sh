@@ -4,7 +4,7 @@ set -eu
 
 # Install zsh
 sudo apt update
-sudo apt install -y zsh
+sudo apt install -y zsh xclip
 
 # Change default shell to Zsh
 chsh -s "$(which zsh)"
