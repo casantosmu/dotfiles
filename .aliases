@@ -1,0 +1,3 @@
+alias datagrip="~/datagrip/bin/datagrip.sh"
+alias webstorm="~/webstorm/bin/webstorm.sh"
+alias rider="~/rider/bin/rider.sh"
