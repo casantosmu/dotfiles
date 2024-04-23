@@ -1,3 +1,7 @@
+function ssh_color() {
+    gnome-terminal -- bash -c "xtermcontrol --bg '#600' && ssh $1;" exit
+}
+
 alias datagrip="~/datagrip/bin/datagrip.sh"
 alias webstorm="~/webstorm/bin/webstorm.sh"
 alias rider="~/rider/bin/rider.sh"
