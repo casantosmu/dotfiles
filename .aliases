@@ -1,5 +1,6 @@
 function ssh_color() {
-    gnome-terminal -- bash -c "xtermcontrol --bg '#600' && ssh $1;" exit
+    gnome-terminal -- bash -c "xtermcontrol --bg '#600' && ssh $1;"
+    exit
 }
 
 alias datagrip="~/datagrip/bin/datagrip.sh"
