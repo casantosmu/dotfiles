@@ -14,6 +14,5 @@ git clone https://github.com/casantosmu/dotfiles.git ~/.dotfiles
 
 # Run setup scripts
 ~/.dotfiles/setup/symlink.sh
-~/.dotfiles/setup/docker.sh
 ~/.dotfiles/setup/node.sh
 ~/.dotfiles/setup/zsh.sh
