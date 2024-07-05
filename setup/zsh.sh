@@ -13,7 +13,7 @@ chsh -s "$(which zsh)"
 if [ -e ~/.oh-my-zsh ]; then
     mv ~/.oh-my-zsh ~/.oh-my-zsh.backup."$(date +%s)"
 fi
-curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s - --unattended --keep-zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
 # Install Zsh plugins
 [ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] || git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
