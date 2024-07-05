@@ -73,7 +73,7 @@ zstyle ':omz:plugins:nvm' autoload yes
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z nvm npm jsontools copyfile copypath zsh-autosuggestions zsh-syntax-highlighting aliases colored-man-pages web-search dotnet)
+plugins=(git z nvm npm jsontools copyfile copypath zsh-autosuggestions zsh-syntax-highlighting aliases colored-man-pages web-search dotnet gcloud)
 
 source $ZSH/oh-my-zsh.sh
 
