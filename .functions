@@ -1,4 +1,21 @@
-function ssh_color() {
-    gnome-terminal -- bash -c "xtermcontrol --bg '#600' && ssh $1;"
+ssh_color() {
+    gnome-terminal -- sh -c "xtermcontrol --bg '#600' && ssh \"$1\";"
+    exit
+}
+
+detach() {
+  "$@" 1>/dev/null 2>/dev/null &
+  disown
+}
+
+start_work() {
+    detach /usr/bin/google-chrome-stable
+    detach /usr/bin/slack
+    detach spotify
+    detach thunderbird
+    detach /usr/share/code/code
+
+    gnome-terminal -- sh -c "cd \"$WORK_FOLDER\" || exit 1; docker compose up -d; ./start-services.sh;"
+    
     exit
 }
