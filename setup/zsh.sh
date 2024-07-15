@@ -15,8 +15,8 @@ if [ -e ~/.oh-my-zsh ]; then
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
-# Add aliases
-ln -fs ~/.dotfiles/.aliases  ~/.oh-my-zsh/custom/aliases.zsh
+# Add custom files
+ln -fs ~/.dotfiles/.functions  ~/.oh-my-zsh/custom/functions.zsh
 
 # Install Zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
