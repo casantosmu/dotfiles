@@ -9,11 +9,11 @@ detach() {
 }
 
 start_work() {
-    detach /usr/bin/google-chrome-stable
-    detach /usr/bin/slack
+    detach google-chrome
+    detach slack
     detach spotify
     detach thunderbird
-    detach /usr/share/code/code
+    detach code
 
     gnome-terminal -- sh -c "cd \"$WORK_FOLDER\" || exit 1; docker compose up -d; ./start-services.sh;"
     
