@@ -1,6 +1,5 @@
-ssh_color() {
-    gnome-terminal -- sh -c "xtermcontrol --bg '#600' && ssh \"$1\";"
-    exit
+ssh_danger() {
+    gnome-terminal --window-with-profile=danger -- ssh "$1"
 }
 
 detach() {
