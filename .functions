@@ -19,3 +19,8 @@ start_work() {
     
     exit
 }
+
+git_redate() {
+  git_date=$(date -d "$1" -R)
+  GIT_COMMITTER_DATE="$git_date" git commit --amend --date="$git_date" --no-edit
+}
