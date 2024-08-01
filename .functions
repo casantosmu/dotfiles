@@ -3,8 +3,8 @@ ssh_danger() {
 }
 
 detach() {
-  "$@" 1>/dev/null 2>/dev/null &
-  disown
+    "$@" 1>/dev/null 2>/dev/null &
+    disown
 }
 
 start_work() {
@@ -20,8 +20,9 @@ start_work() {
 }
 
 git_redate() {
-  git_date=$(date -d "$1" -R)
-  GIT_COMMITTER_DATE="$git_date" git commit --amend --date="$git_date" --no-edit
+    local git_date
+    git_date=$(date -d "$1" -R)
+    GIT_COMMITTER_DATE="$git_date" git commit --amend --date="$git_date" --no-edit
 }
 
 upgrate() {
