@@ -14,7 +14,7 @@ start_work() {
     detach thunderbird
     detach code
 
-    gnome-terminal -- sh -c "cd \"$WORK_FOLDER\" || exit 1; docker compose up -d; ./start-services.sh;"
+    gnome-terminal -- "$SHELL" -c "trap 'exec \"$SHELL\"' INT; cd \"$WORK_FOLDER\" || exit 1; docker compose up -d; ./start-services.sh"
     
     exit
 }
