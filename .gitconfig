@@ -5,6 +5,8 @@
 	prune = true
 [init]
 	defaultBranch = main
+[merge]
+        ff = no
 [alias]
 	uncommit = reset HEAD^
 	lg = lg1
