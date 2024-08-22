@@ -3,10 +3,14 @@
 	email = casantosmu@gmail.com
 [fetch]
 	prune = true
+[merge]
+  ff = false
+[pull]
+  rebase = true
+[push]
+	default = simple
 [init]
 	defaultBranch = main
-[merge]
-        ff = no
 [alias]
 	uncommit = reset HEAD^
 	lg = lg1
