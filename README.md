@@ -10,7 +10,6 @@ curl -fsSL https://raw.githubusercontent.com/casantosmu/dotfiles/main/install.sh
 
 ## Contents
 
-- `default-node-packages`: List of global Node.js packages to install.
 - `install.sh`: Main installation script.
 - `setup/`: Directory containing setup scripts:
   - `node.sh`: Installs Node.js and global packages.
