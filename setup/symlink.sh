@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ln -fs ~/.dotfiles/.zshrc ~/.zshrc
-ln -fs ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -fs ~/.dotfiles/.bashrc ~/.bashrc
+ln -fs "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
+ln -fs "$HOME/.dotfiles/.gitconfig" "$HOME/.gitconfig"
+ln -fs "$HOME/.dotfiles/.bashrc" "$HOME/.bashrc"

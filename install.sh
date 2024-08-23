@@ -7,12 +7,12 @@ sudo apt-get update
 sudo apt-get install git -y
 
 # Clone dotfiles repository
-if [ -e ~/.dotfiles ]; then
-    mv ~/.dotfiles ~/.dotfiles.backup."$(date +%s)"
+if [ -e "$HOME/.dotfiles" ]; then
+    mv "$HOME/.dotfiles" "$HOME/.dotfiles.backup.$(date +%s)"
 fi
-git clone https://github.com/casantosmu/dotfiles.git ~/.dotfiles
+git clone https://github.com/casantosmu/dotfiles.git "$HOME/.dotfiles"
 
 # Run setup scripts
-~/.dotfiles/setup/symlink.sh
-~/.dotfiles/setup/node.sh
-~/.dotfiles/setup/zsh.sh
+"$HOME/.dotfiles/setup/symlink.sh"
+"$HOME/.dotfiles/setup/node.sh"
+"$HOME/.dotfiles/setup/zsh.sh"

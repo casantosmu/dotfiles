@@ -10,17 +10,17 @@ sudo apt install -y zsh xclip
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
 # Install Oh My Zsh
-if [ -e ~/.oh-my-zsh ]; then
-    mv ~/.oh-my-zsh ~/.oh-my-zsh.backup."$(date +%s)"
+if [ -e "$HOME/.oh-my-zsh" ]; then
+    mv "$HOME/.oh-my-zsh" "$HOME/.oh-my-zsh.backup.$(date +%s)"
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
 # Add custom files
-ln -fs ~/.dotfiles/.functions  ~/.oh-my-zsh/custom/functions.zsh
+ln -fs "$HOME/.dotfiles/.functions" "$HOME/.oh-my-zsh/custom/functions.zsh"
 
 # Install Zsh plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 
 # Install Zsh themes
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
