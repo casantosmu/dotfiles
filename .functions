@@ -40,3 +40,14 @@ EOF
 upgrate() {
     sudo apt update && sudo apt upgrade -y
 }
+
+restic_backup() {
+    repo="rclone:gdrive:backup"
+
+    echo -n "Enter RESTIC password: "
+    read -rs  RESTIC_PASSWORD
+    echo
+
+    RESTIC_PASSWORD="$RESTIC_PASSWORD" restic -r "$repo" backup --exclude-file="$HOME/.backup_exclude" "$HOME"
+    RESTIC_PASSWORD="$RESTIC_PASSWORD" restic -r "$repo" check
+}
