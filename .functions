@@ -51,3 +51,8 @@ restic_backup() {
     RESTIC_PASSWORD="$RESTIC_PASSWORD" restic -r "$repo" backup --exclude-file="$HOME/.backup_exclude" "$HOME"
     RESTIC_PASSWORD="$RESTIC_PASSWORD" restic -r "$repo" check
 }
+
+docker_clean() {
+    docker stop $(docker ps -q)
+    docker rm $(docker ps -a -q)
+}
