@@ -74,15 +74,6 @@ zstyle ':omz:plugins:nvm' autoload yes
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  colored-man-pages
-  command-not-found
-  copyfile
-  copypath
-  dotnet
-  gcloud
-  git
-  jsontools
-  npm
   nvm
   z
   zsh-autosuggestions

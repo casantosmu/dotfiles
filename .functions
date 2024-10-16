@@ -3,7 +3,7 @@ ssh_danger() {
 }
 
 detach() {
-    "$@" 1>/dev/null 2>/dev/null &
+    "$@" > /dev/null 2>&1 &
     disown
 }
 

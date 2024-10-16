@@ -1,15 +1,11 @@
 Descargas/**
 snap/**
-.aspnet/**
 .cache/**
-.config/**
 .docker/**
 .dotnet/**
-.java/**
 .local/share/Trash/**
 .local/share/pnpm/**
 .npm/**
-.nuget/**
 .nvm/**
 .oh-my-zsh/**
 .pki/**
