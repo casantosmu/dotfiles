@@ -9,6 +9,7 @@
   rebase = true
 [push]
 	default = simple
+	autoSetupRemote = true
 [init]
 	defaultBranch = main
 [alias]
