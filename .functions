@@ -62,7 +62,7 @@ c() {
 }
 
 recursive_cat() {
-    find . \( -name "node_modules" -o -name ".git" -o -name "package-lock.json" -o -name "pnpm-lock.yaml" \) -prune -o -type f ! \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" -o -name "*.webp" -o -name "*.jpeg" -o -name "*.svg" \) -print | while read -r file; do
+    find . \( -name "node_modules" -o -name "dist" -o -name ".git" -o -name "package-lock.json" -o -name "pnpm-lock.yaml" \) -prune -o -type f ! \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" -o -name "*.webp" -o -name "*.jpeg" -o -name "*.svg" \) -print | while read -r file; do
       if file "$file" | grep -q "text"; then
         echo "==== $file ===="
         cat "$file"
