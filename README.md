@@ -8,6 +8,15 @@ This repository contains my personal dotfiles.
 curl -fsSL https://raw.githubusercontent.com/casantosmu/dotfiles/main/install.sh | sh -
 ```
 
+## Git identity
+
+Configure the Git identity per computer in `~/.gitconfig.local`:
+
+```sh
+git config --file "$HOME/.gitconfig.local" user.name "Carlos Santos"
+git config --file "$HOME/.gitconfig.local" user.email "email@example.com"
+```
+
 ## Contents
 
 - `install.sh`: Main installation script.
