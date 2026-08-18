@@ -1,40 +1,7 @@
-ssh_danger() {
-    gnome-terminal --window-with-profile=danger -- ssh "$1"
-}
-
-detach() {
-    "$@" > /dev/null 2>&1 &
-    disown
-}
-
-start_work() {
-    detach google-chrome
-    detach slack
-    detach spotify
-    detach thunderbird
-    detach code
-
-    gnome-terminal -- "$SHELL" -c "trap 'exec \"$SHELL\"' INT; cd \"$WORK_FOLDER\" || exit 1; docker compose up -d; ./start-services.sh"
-    
-    exit
-}
-
 git_redate() {
     local git_date
     git_date=$(date -d "$1" -R)
     GIT_COMMITTER_DATE="$git_date" git commit --amend --date="$git_date" --no-edit
-}
-
-editorconfig() {
-    cat << EOF > .editorconfig
-[*]
-charset = utf-8
-insert_final_newline = true
-end_of_line = lf
-indent_style = space
-indent_size = 2
-max_line_length = 80
-EOF
 }
 
 upgrate() {
@@ -48,14 +15,4 @@ docker_clean() {
 
 c() {
     clear
-}
-
-recursive_cat() {
-    find . \( -name "node_modules" -o -name "dist" -o -name ".git" -o -name "package-lock.json" -o -name "pnpm-lock.yaml" \) -prune -o -type f ! \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" -o -name "*.webp" -o -name "*.jpeg" -o -name "*.svg" \) -print | while read -r file; do
-      if file "$file" | grep -q "text"; then
-        echo "==== $file ===="
-        cat "$file"
-        echo
-      fi
-    done
 }
