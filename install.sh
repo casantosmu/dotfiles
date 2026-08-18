@@ -13,7 +13,6 @@ fi
 git clone https://github.com/casantosmu/dotfiles.git "$HOME/.dotfiles"
 
 # Run setup scripts
-"$HOME/.dotfiles/setup/backup.sh"
 "$HOME/.dotfiles/setup/node.sh"
 "$HOME/.dotfiles/setup/symlink.sh"
 "$HOME/.dotfiles/setup/zsh.sh"
