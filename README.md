@@ -5,7 +5,7 @@ This repository contains my personal dotfiles.
 ## Installation
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/casantosmu/dotfiles/main/install.sh | sh -
+curl -fsSL https://raw.githubusercontent.com/casantosmu/dotfiles/main/install.sh | bash -
 ```
 
 ## Git identity
