@@ -3,8 +3,7 @@
 set -euo pipefail
 
 # Install zsh
-sudo apt update
-sudo apt install -y zsh xclip
+sudo apt-get install -y zsh
 
 # Change default shell to Zsh
 sudo chsh -s "$(which zsh)" "$(whoami)"
