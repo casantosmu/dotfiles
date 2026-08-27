@@ -2,16 +2,17 @@
 
 set -euo pipefail
 
-backup_file() {
-    if [ -e "$1" ]; then
-        mv "$1" "$1.backup.$(date +%s)"
+link_file() {
+    local file="$1"
+    local target="$HOME/$file"
+
+    if [ -e "$target" ]; then
+        mv "$target" "$target.backup.$(date +%s)"
     fi
+
+    ln -fs "$HOME/.dotfiles/$file" "$target"
 }
 
-backup_file "$HOME/.zshrc"
-backup_file "$HOME/.gitconfig"
-backup_file "$HOME/.p10k.zsh"
-
-ln -fs "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
-ln -fs "$HOME/.dotfiles/.gitconfig" "$HOME/.gitconfig"
-ln -fs "$HOME/.dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
+link_file .zshrc
+link_file .gitconfig
+link_file .p10k.zsh
