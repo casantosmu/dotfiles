@@ -16,3 +16,7 @@ docker_clean() {
 c() {
     clear
 }
+
+dus() {
+    du -hs -- *(D) | sort -hr
+}
