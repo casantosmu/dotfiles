@@ -16,5 +16,6 @@ source "$ZSH/oh-my-zsh.sh"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+export PATH="$HOME/.duckdb/cli/1.4.5:$PATH"
 
 [[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
