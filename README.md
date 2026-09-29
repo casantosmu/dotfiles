@@ -8,6 +8,10 @@ This repository contains my personal dotfiles.
 curl -fsSL https://raw.githubusercontent.com/casantosmu/dotfiles/main/install.sh | bash -
 ```
 
+## Font
+
+Use a [Nerd Font](https://github.com/romkatv/powerlevel10k#fonts) with Powerlevel10k (MesloLGS NF recommended).
+
 ## Git identity
 
 Configure the Git identity per computer in `~/.gitconfig.local`:
