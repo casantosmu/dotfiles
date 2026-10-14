@@ -1,4 +1,4 @@
-# Change the date of the latest commit without changing its contents or message.
+# Change the date of the latest commit without changing its contents or message
 # Usage: git_redate "2026-10-14 18:30"
 git_redate() {
     local git_date
@@ -6,31 +6,30 @@ git_redate() {
     GIT_COMMITTER_DATE="$git_date" git commit --amend --date="$git_date" --no-edit
 }
 
-# Update apt package lists and upgrade installed packages.
+# Update apt package lists and upgrade installed packages
 # Usage: upgrate
 upgrate() {
     sudo apt update && sudo apt upgrade -y
 }
 
-# Stop and remove all Docker containers.
+# Stop and remove all Docker containers
 # Usage: docker_clean
 docker_clean() {
     docker stop $(docker ps -q)
     docker rm $(docker ps -a -q)
 }
 
-# Clear the terminal.
+# Clear the terminal
 c() {
     clear
 }
 
-# Show directory sizes, including hidden entries, largest first.
-# Usage: dus
+# Show directory sizes, including hidden entries, largest first
 dus() {
     du -hs -- *(D) | sort -hr
 }
 
-# Back up selected home files.
+# Back up selected home files
 # Usage: backup_home [--dry-run] DESTINATION
 backup_home() {
     local options=(-avh --progress --exclude='node_modules/')
