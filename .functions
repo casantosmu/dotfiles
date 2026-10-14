@@ -32,7 +32,22 @@ dus() {
 # Back up selected home files
 # Usage: backup_home [--dry-run] DESTINATION
 backup_home() {
-    local options=(-avh --progress --exclude='node_modules/')
-    [[ "$1" == "--dry-run" ]] && options+=(--dry-run) && shift
+    local options=(
+        -avh
+        --progress
+        --exclude='node_modules/'
+        --exclude='Cache/'
+        --exclude='coverage/'
+        --exclude='dist/'
+        --exclude='build/'
+        --exclude='.gradle/'
+        --exclude='.idea/'
+        --exclude='.dart_tool/'
+        --exclude='chrome-profile/'
+    )
+    if [[ "$1" == "--dry-run" ]]; then
+        options+=(--dry-run --exclude='.git/')
+        shift
+    fi
     rsync "${options[@]}" "$HOME"/{Descargas,development,Documentos,.dotfiles,Escritorio,.gitconfig.local,Imágenes} "$1"
 }
