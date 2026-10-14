@@ -20,3 +20,9 @@ c() {
 dus() {
     du -hs -- *(D) | sort -hr
 }
+
+backup_home() {
+    local options=(-avh --progress --exclude='node_modules/')
+    [[ "$1" == "--dry-run" ]] && options+=(--dry-run) && shift
+    rsync "${options[@]}" "$HOME"/{Descargas,development,Documentos,.dotfiles,Escritorio,.gitconfig.local,Imágenes} "$1"
+}
