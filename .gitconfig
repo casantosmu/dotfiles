@@ -1,9 +1,9 @@
 [fetch]
 	prune = true
 [merge]
-  ff = false
+	ff = false
 [pull]
-  rebase = true
+	rebase = true
 [push]
 	autoSetupRemote = true
 [init]
