@@ -44,9 +44,23 @@ backup_home() {
         --exclude='.dart_tool/'
         --exclude='chrome-profile/'
     )
+    local sources=(
+        "$HOME/Descargas"
+        "$HOME/development"
+        "$HOME/Documentos"
+        "$HOME/Documents"
+        "$HOME/Downloads"
+        "$HOME/indigitall"
+        "$HOME/.dotfiles"
+        "$HOME/Escritorio"
+        "$HOME/.gitconfig.local"
+        "$HOME/Imágenes"
+        "$HOME/Vídeos"
+        "$HOME/Música"
+    )
     if [[ "$1" == "--dry-run" ]]; then
         options+=(--dry-run --exclude='.git/')
         shift
     fi
-    rsync "${options[@]}" "$HOME"/{Descargas,development,Documentos,Documents,Downloads,indigitall,.dotfiles,Escritorio,.gitconfig.local,Imágenes,Vídeos,Música} "$1"
+    rsync "${options[@]}" "${sources[@]}" "$1"
 }
