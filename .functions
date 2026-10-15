@@ -7,13 +7,11 @@ git_redate() {
 }
 
 # Update apt package lists and upgrade installed packages
-# Usage: upgrate
 upgrate() {
     sudo apt update && sudo apt upgrade -y
 }
 
 # Stop and remove all Docker containers
-# Usage: docker_clean
 docker_clean() {
     docker stop $(docker ps -q)
     docker rm $(docker ps -a -q)
@@ -35,6 +33,7 @@ backup_home() {
     local options=(
         -avh
         --progress
+        --ignore-missing-args
         --exclude='node_modules/'
         --exclude='Cache/'
         --exclude='coverage/'
@@ -49,5 +48,5 @@ backup_home() {
         options+=(--dry-run --exclude='.git/')
         shift
     fi
-    rsync "${options[@]}" "$HOME"/{Descargas,development,Documentos,.dotfiles,Escritorio,.gitconfig.local,Imágenes} "$1"
+    rsync "${options[@]}" "$HOME"/{Descargas,development,Documentos,Documents,Downloads,indigitall,.dotfiles,Escritorio,.gitconfig.local,Imágenes,Vídeos,Música} "$1"
 }
