@@ -13,6 +13,6 @@ plugins=(
 
 source "$ZSH/oh-my-zsh.sh"
 
-export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+export PATH="$HOME/.local/bin:$PATH:/usr/local/go/bin:$HOME/go/bin"
 
 [[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
