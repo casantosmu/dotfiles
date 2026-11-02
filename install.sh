@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-# Install GIT
+# Install base tools
 sudo apt-get update
-sudo apt-get install -y git curl xclip
+sudo apt-get install -y git curl xclip ripgrep
 
 # Clone dotfiles repository
 if [ -e "$HOME/.dotfiles" ]; then
